@@ -1,0 +1,93 @@
+name: ua-demo
+recipe: drupal9
+config:
+  webroot: web
+  via: apache
+# The following additional build step will install the Platform CLI
+# in the application container.
+services:
+  appserver:
+      type: php:8.1
+      composer_version: 2
+      # webroot: web
+      xdebug: true
+      overrides:
+        environment:
+          # support debugging Drush with XDEBUG.
+          PHP_IDE_CONFIG: "serverName=appserver"
+          LANDO_HOST_IP: "host.docker.internal"
+          XDEBUG_CONFIG: "client_host=host.docker.internal  xdebug.client_port = 9000"
+          XDEBUG_MODE: "debug"
+      config:
+        php: .lando.php.ini
+      run_as_root:
+      # Symlink to the source files
+      - ln -nfs /app/vendor/simplesamlphp/simplesamlphp/public /app/web/simplesaml
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+tooling:
+  # platform:
+  #   service: appserver
+  #   description: Run Platform CLI commands
+  #   cmd:
+  #     - /var/www/.platformsh/bin/platform
+  #   options:
+  #     passthrough: true
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for Apache.
+    cmd: docker-php-ext-enable xdebug && /etc/init.d/apache2 reload && echo "Enabling xdebug"
+    user: root
+
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for Apache.
+    cmd: rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload && echo "Disabling xdebug"
+    user: root
+
+  # Just Use "lando drupal-install-empty" to create a new project (with no repo) following drupal recomended project
+  drupal-install-empty:
+    description: Manually download drupal from drupal recomended project
+    service: appserver
+    cmd:
+      - echo "▶️  Downloading Drupal recommended project and dependencies using Composer ..."
+      - composer create-project drupal/recommended-project tmp && cp -r tmp/. . && rm -rf tmp
+      - composer require --sort-packages -- 'drush/drush'
+      - composer require --sort-packages -- 'cweagans/composer-patches:^1.6' 'drupal/admin_toolbar'
+      - composer require --sort-packages -- 'drupal/metatag:^1.22'
+      - composer require --sort-packages -- 'drupal/sitemap:^2.0@beta'
+      - echo "▶️  Installing Drupal ..."
+      - drush site:install --debug --db-url=mysql://drupal9:drupal9@database/drupal9 -y
+      - echo "▶️  Note login credentials                    ⬆                     ⬆"
+      - drush en admin_toolbar admin_toolbar_tools admin_toolbar_search book metatag sitemap --yes
+      - echo "▶️  Closing installation ..."
+      - chmod u+wX /app/web/sites/default && touch .installed
+  # Just Use "lando drupal-install" to install a new site from a existent repo project
+  drupal-install:
+    description: Manually install drupal from a local repo
+    service: appserver
+    cmd:
+      - echo "▶️  Assure base dependencies installation using Composer ..."
+      - composer install
+      - echo "▶️  Installing Drupal ..."
+      - drush site:install --debug --existing-config --db-url=mysql://drupal10:drupal10@database/drupal10 -y
+      - echo "▶️  Note login credentials                    ⬆                     ⬆"
+      # https://www.drupal.org/node/2913822#comment-14632893
+      - drush urol administrator admin
+      - drush php-eval 'node_access_rebuild();'
+      - drush updb -y
+      - drush cr
+      #- drush ev "drapn_create_types_data();"
+  # Just Use "lando drupal-update" to install a new site from a existent repo project
+  drupal-update:
+    description: Manually Update an existent installation
+    service: appserver
+    cmd:
+      - echo "▶️  Classic Drupal Update an existent installation..."
+      - drush cr
+      - composer install
+      - drush cim -y
+      - drush updb -y
+      - drush cr
