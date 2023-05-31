@@ -1,0 +1,7 @@
+tips:
+  page-title:
+    label: 'Título da Página'
+  plugins:
+    label: Extensões
+  save-configuration:
+    label: 'Guardar configuração'

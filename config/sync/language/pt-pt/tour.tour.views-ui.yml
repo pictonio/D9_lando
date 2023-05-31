@@ -1,0 +1,32 @@
+label: 'Ver página de edição'
+tips:
+  views-main:
+    label: 'Gerir definições de visualização'
+    body: 'Ver ou editar a configuração.'
+  views-ui-displays:
+    label: 'Exibições nesta visualização'
+    body: 'Uma exibição é uma forma de emitir os resultados, por exemplo, como uma página ou um bloco. Uma visualização pode conter vários monitores, que estão listados aqui. O display ativo é destacado.'
+  views-ui-view-admin:
+    label: 'Ver administração'
+    body: 'Execute tarefas administrativas, incluindo adicionar uma descrição e criar um clone. Clique no botão suspenso para ver as opções disponíveis.'
+  views-ui-format:
+    label: 'Formato de saída'
+    body: 'Escolha como apresentar os resultados. Por exemplo, escolha <em>Conteúdo</em> para apresentar cada item completamente, usando suas configurações de apresentação configuradas. Ou escolha <em>Campos</em>, que permite a apresentação apenas de campos específicos para cada resultado. Formatos adicionais podem ser adicionados instalando módulos para <em>estender</em> a funcionalidade básica do Drupal.'
+  views-ui-fields:
+    label: Campos
+    body: 'Se esta visualização utiliza campos, eles são listados aqui. Pode clicar num campo para o configurar.'
+  views-ui-filter:
+    label: 'Filtre a sua visualização'
+    body: 'Adicione filtros para limitar os resultados apresentados. Por exemplo, para mostrar apenas o conteúdo <em>publicado</em>, deve adicionar um filtro para <em>Publicado</em> e selecionar <em>Sim</em>.'
+  views-ui-filter-operations:
+    label: 'Filtrar ações'
+    body: 'Adicionar, reordenar ou remover filtros.'
+  views-ui-sorts:
+    label: 'Critérios de Ordenação'
+    body: 'Controle a ordem em que os resultados são produzidos. Clique em uma regra de classificação ativa para configurá-la.'
+  views-ui-sorts-operations:
+    label: 'Ordenar ações'
+    body: 'Adicionar, reordenar ou remover regras de ordenação.'
+  views-ui-preview:
+    label: Pré-visualizar
+    body: 'Mostrar uma pré-visualização da visualização do output.'

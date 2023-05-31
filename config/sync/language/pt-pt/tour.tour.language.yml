@@ -1,0 +1,16 @@
+label: Idioma
+tips:
+  language-overview:
+    label: Idiomas
+    body: '<p>A página "Idiomas" permite adicionar, editar, excluir e reordenar idiomas para o site.</p>'
+  language-add:
+    label: 'Adicionar idiomas'
+  language-reorder:
+    label: 'A reordenar os idiomas'
+  language-default:
+    label: 'Defina um idioma como predefinido'
+    body: '<p>Você pode alterar o idioma padrão do site, escolhendo um dos idiomas configurados como padrão. O site usará o idioma padrão em situações em que nenhuma escolha é feita, mas um idioma deve ser definido, por exemplo, como o idioma da interface exibida.</p>'
+  language-operations:
+    label: 'A modificar os idiomas'
+  language-continue:
+    label: 'Continuando em'

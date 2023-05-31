@@ -1,0 +1,15 @@
+label: 'Página de disposição de bloco'
+tips:
+  block-layout:
+    label: 'Disposição do bloco'
+    body: 'Blocos são caixas de conteúdo renderizadas numa área, ou região, duma página da web que pode ser exibida em regiões (como rodapé ou barra lateral) na sua página.'
+  place-block:
+    label: 'Colocar Blocos'
+  block-region:
+    label: 'Região do Bloco'
+    body: 'Atribua ou altere a região de um bloco clicando aqui. Uma lista suspensa com todas as regiões aparecerá. Pode colocar um bloco em várias regiões.'
+  configure-block:
+    label: 'Configurar Bloco'
+    body: 'Ao clicar em "Configurar" você pode ir em frente e editar o conteúdo do bloco, lidar com as configurações de visibilidade e até mesmo alterar o posicionamento de onde está no seu tema.'
+  custom-block-library:
+    label: 'Biblioteca de Blocos Personalizados'
