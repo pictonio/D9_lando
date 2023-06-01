@@ -1,0 +1,20 @@
+uuid: c57f781f-27f1-4dae-a086-6db6955bb612
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.director.field_unidade_organica
+    - profile.type.director
+id: profile.director.default
+targetEntityType: profile
+bundle: director
+mode: default
+content:
+  field_unidade_organica:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  is_default: true

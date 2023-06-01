@@ -1,0 +1,21 @@
+uuid: d221ada6-c713-4c7a-8726-c1e52e2c916f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_unidade_organica
+    - profile.type.director
+  module:
+    - options
+id: profile.director.field_unidade_organica
+field_name: field_unidade_organica
+entity_type: profile
+bundle: director
+label: 'Unidade Organica'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

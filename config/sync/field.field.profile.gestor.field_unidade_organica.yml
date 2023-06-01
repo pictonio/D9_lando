@@ -1,0 +1,21 @@
+uuid: 84a27c74-0516-46bb-a969-b46c27ef9ccd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_unidade_organica
+    - profile.type.gestor
+  module:
+    - options
+id: profile.gestor.field_unidade_organica
+field_name: field_unidade_organica
+entity_type: profile
+bundle: gestor
+label: 'Unidade Organica'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

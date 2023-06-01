@@ -25,6 +25,7 @@
         "drupal/feeds": "^3.0@beta",
         "drupal/feeds_tamper": "^2.0@beta",
         "drupal/metatag": "^1.22",
+        "drupal/profile": "^1.7",
         "drupal/sitemap": "^2.0@beta",
         "drupal/webform": "^6.2@beta",
         "drush/drush": "^11.5"

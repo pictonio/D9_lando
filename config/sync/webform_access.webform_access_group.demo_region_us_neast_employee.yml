@@ -1,0 +1,13 @@
+uuid: 6a95d0d0-e1e1-4eba-9480-f3feb9a0b4aa
+langcode: en
+status: true
+dependencies: {  }
+id: demo_region_us_neast_employee
+label: 'United States: Northeast: Employee'
+description: null
+type: demo_region_employee
+permissions:
+  - view_any
+  - update_any
+emails:
+  - demo_region_employee@test.com

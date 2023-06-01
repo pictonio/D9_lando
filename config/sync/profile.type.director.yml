@@ -1,0 +1,13 @@
+uuid: 7ef64709-7e38-4844-9bee-f97d61b451b9
+langcode: en
+status: true
+dependencies: {  }
+id: director
+label: Director
+display_label: Director
+multiple: true
+registration: false
+roles:
+  authenticated: authenticated
+allow_revisions: true
+new_revision: true

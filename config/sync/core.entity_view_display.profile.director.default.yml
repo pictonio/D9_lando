@@ -1,0 +1,22 @@
+uuid: ef9021a2-125a-4da7-8a69-5dcbdf3ebab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.director.field_unidade_organica
+    - profile.type.director
+  module:
+    - options
+id: profile.director.default
+targetEntityType: profile
+bundle: director
+mode: default
+content:
+  field_unidade_organica:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

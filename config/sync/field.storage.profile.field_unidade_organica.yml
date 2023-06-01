@@ -1,0 +1,30 @@
+uuid: 1aa27b0e-e7dc-4992-8234-44d9d86bf33e
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_unidade_organica
+field_name: field_unidade_organica
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: STIC
+    -
+      value: '2'
+      label: Matemática
+    -
+      value: '3'
+      label: Biblicoteca
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

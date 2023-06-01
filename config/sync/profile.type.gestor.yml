@@ -1,0 +1,13 @@
+uuid: 55e5378f-4bfd-4bc8-afc0-39db48fa8f04
+langcode: en
+status: true
+dependencies: {  }
+id: gestor
+label: Gestor
+display_label: Gestor
+multiple: true
+registration: false
+roles:
+  authenticated: authenticated
+allow_revisions: true
+new_revision: true

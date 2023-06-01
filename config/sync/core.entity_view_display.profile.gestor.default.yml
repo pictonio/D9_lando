@@ -1,0 +1,22 @@
+uuid: 373f41e4-f7f5-46f8-8e5e-9324fda7c2d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.gestor.field_unidade_organica
+    - profile.type.gestor
+  module:
+    - options
+id: profile.gestor.default
+targetEntityType: profile
+bundle: gestor
+mode: default
+content:
+  field_unidade_organica:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
