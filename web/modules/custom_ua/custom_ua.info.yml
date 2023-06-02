@@ -1,0 +1,5 @@
+name: Custom UA
+type: module
+description: Module form drupal training
+package: Custom
+core_version_requirement: ^9 || ^10

@@ -12,7 +12,37 @@ id: formacao_ua_dia_3
 title: 'Formação UA - dia 3'
 description: ''
 category: Demo
-elements: null
+elements: |-
+  dropdown_1:
+    '#type': select
+    '#title': Dropdown
+    '#description': '<p>Breve descrição sobre o Dropdown</p>'
+    '#help_title': 'Help Title'
+    '#help': '<p>Help Text</p>'
+    '#options':
+      op1: 'Opção 1'
+      op2: 'Opção 2'
+      op3: 'Opção 3'
+  processed_text_op1:
+    '#type': processed_text
+    '#states':
+      visible:
+        ':input[name="dropdown_1"]':
+          value: op1
+    '#text': '<p>Está a ver este texto porque selecionou a <strong>opção 1</strong></p>'
+    '#format': basic_html
+  dropdown_2:
+    '#type': select
+    '#title': 'Dropdown 2'
+    '#description': '<p>Breve descrição sobre o&nbsp;</p><table class="token-tree token-click-insert responsive-enabled treetable" data-striping="1" data-once="tableresponsive token-tree"><tbody><tr class="even leaf collapsed" id="token-webform--element--" data-tt-id="token-webform--element--" data-tt-parent-id="token-webform"><td class="token-key" data-once="token-click-insert"><p><a href="javascript:void(0);" title="Insert this token into your form">[webform:element:dropdown_1:description]</a></p><p><a href="javascript:void(0);" title="Insert this token into your form">[webform:element:dropdown_1:help]</a></p><p>&nbsp;</p></td><td>&nbsp;</td></tr></tbody></table>'
+    '#options':
+      op1: 'Opção 1'
+      op2: 'Opção 2'
+      op3: 'Opção 3'
+    '#states':
+      visible:
+        ':input[name="dropdown_1"]':
+          value: op2
 css: ''
 javascript: ''
 settings:

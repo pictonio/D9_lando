@@ -31,6 +31,7 @@
         "drupal/profile": "^1.7",
         "drupal/simple_oauth": "^6.0@beta",
         "drupal/sitemap": "^2.0@beta",
+        "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/webform": "^6.2@beta",
         "drush/drush": "^11.5"
     },

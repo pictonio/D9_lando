@@ -1,0 +1,6 @@
+services:
+  custom_ua.event_subscriber:
+    class: Drupal\custom_ua\EventSubscriber\CustomUaSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }
