@@ -1,0 +1,13 @@
+uuid: 276e6baf-f769-4ed3-a37f-bec3f225577e
+langcode: en
+status: true
+dependencies: {  }
+id: process_halfcpm
+modeller: bpmn_io
+label: 'UA Example'
+version: v1.0
+weight: null
+events: {  }
+conditions: {  }
+gateways: {  }
+actions: {  }
