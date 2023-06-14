@@ -1,0 +1,44 @@
+uuid: 6c0aa3bc-fbd3-43fb-9c9e-68aeb1162491
+langcode: en
+status: true
+dependencies:
+  module:
+    - eca_form
+id: process_nydst5y
+modeller: bpmn_io
+label: 'UA Webforms'
+version: '1.0'
+weight: null
+events:
+  Event_03y5vgi:
+    plugin: 'form:form_submit'
+    label: 'Webform '
+    configuration:
+      form_id: webform-submission-contact-add-form
+      entity_type_id: ''
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_1m25w3a
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_1m25w3a:
+    plugin: action_message_action
+    label: 'Log message'
+    configuration:
+      message: 'Submission message by ECA'
+      replace_tokens: true
+    successors:
+      -
+        id: Activity_1w1qv7s
+        condition: ''
+  Activity_1w1qv7s:
+    plugin: action_goto_action
+    label: Redirect
+    configuration:
+      replace_tokens: false
+      url: 'https://pictonio.com'
+    successors: {  }

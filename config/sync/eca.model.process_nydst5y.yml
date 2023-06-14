@@ -1,0 +1,108 @@
+uuid: 721ec49c-cd1a-43b9-bd90-ae81d3a50011
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.process_nydst5y
+id: process_nydst5y
+label: 'UA Webforms'
+tags:
+  - ''
+documentation: |-
+  Path to documentation
+  https://ua-demo.lndo.site/
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_nYdST5y" name="UA Webforms" isExecutable="true" camunda:versionTag="1.0">
+      <bpmn2:documentation>Path to documentation
+  https://ua-demo.lndo.site/</bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <camunda:properties>
+          <camunda:property />
+          <camunda:property name="key_01" value="key01" />
+        </camunda:properties>
+      </bpmn2:extensionElements>
+      <bpmn2:startEvent id="Event_03y5vgi" name="Webform " camunda:modelerTemplate="org.drupal.event.form:form_submit">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="form:form_submit" />
+          </camunda:properties>
+          <camunda:field name="form_id">
+            <camunda:string>webform-submission-contact-add-form</camunda:string>
+          </camunda:field>
+          <camunda:field name="entity_type_id">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="bundle">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="operation">
+            <camunda:string></camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_1udxys8</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_1m25w3a" name="Log message" camunda:modelerTemplate="org.drupal.action.action_message_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="action_message_action" />
+          </camunda:properties>
+          <camunda:field name="message">
+            <camunda:string>Submission message by ECA</camunda:string>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_1udxys8</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_057n6io</bpmn2:outgoing>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_1udxys8" sourceRef="Event_03y5vgi" targetRef="Activity_1m25w3a" />
+      <bpmn2:task id="Activity_1w1qv7s" name="Redirect" camunda:modelerTemplate="org.drupal.action.action_goto_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="action_goto_action" />
+          </camunda:properties>
+          <camunda:field name="url">
+            <camunda:string>https://pictonio.com</camunda:string>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_057n6io</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_057n6io" sourceRef="Activity_1m25w3a" targetRef="Activity_1w1qv7s" />
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-63dfc4c8-2dea-4656-8f4a-6dae7992076a">
+      <bpmndi:BPMNPlane id="sid-2d41692f-83f4-4853-926b-9607ad60799f" bpmnElement="Process_nYdST5y">
+        <bpmndi:BPMNShape id="Event_17my36k_di" bpmnElement="Event_03y5vgi">
+          <dc:Bounds x="362" y="122" width="36" height="36" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="359" y="165" width="44" height="14" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_1m25w3a_di" bpmnElement="Activity_1m25w3a">
+          <dc:Bounds x="570" y="100" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_1w1qv7s_di" bpmnElement="Activity_1w1qv7s">
+          <dc:Bounds x="910" y="100" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_1udxys8_di" bpmnElement="Flow_1udxys8">
+          <di:waypoint x="398" y="140" />
+          <di:waypoint x="570" y="140" />
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_057n6io_di" bpmnElement="Flow_057n6io">
+          <di:waypoint x="670" y="140" />
+          <di:waypoint x="910" y="140" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="770" y="122" width="42" height="14" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

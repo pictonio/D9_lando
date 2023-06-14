@@ -9,10 +9,10 @@ settings:
   client_id: 'aoLixx7FBKdozcJ3jNiTSzedqxEa '
   client_secret: f0ouUpM2BZo6gf1W8l6cx0rpNVYa
   iss_allowed_domains: ''
-  issuer_url: 'https://www.ua.pt'
-  authorization_endpoint: 'https://wso2-is.ua.pt/oauth2/authorize'
-  token_endpoint: 'https://wso2-is.ua.pt/oauth2/token'
-  userinfo_endpoint: 'https://wso2-is.ua.pt/oauth2/userinfo'
+  issuer_url: 'https://wso2-gw.ua.pt'
+  authorization_endpoint: 'https://wso2-gw.ua.pt/authorize'
+  token_endpoint: 'https://wso2-gw.ua.pt/token'
+  userinfo_endpoint: 'https://wso2-gw.ua.pt/userinfo'
   end_session_endpoint: ''
   scopes:
     - openid
