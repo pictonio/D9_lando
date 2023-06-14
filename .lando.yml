@@ -16,7 +16,7 @@ services:
           # support debugging Drush with XDEBUG.
           PHP_IDE_CONFIG: "serverName=appserver"
           LANDO_HOST_IP: "host.docker.internal"
-          XDEBUG_CONFIG: "client_host=host.docker.internal  xdebug.client_port = 9000"
+          XDEBUG_CONFIG: "client_host=host.docker.internal  xdebug.client_port = 9003"
           XDEBUG_MODE: "debug"
       config:
         php: .lando.php.ini
