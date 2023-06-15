@@ -18,6 +18,7 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.6",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/bootstrap5": "^3.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
@@ -25,7 +26,9 @@
         "drupal/feeds": "^3.0@beta",
         "drupal/feeds_tamper": "^2.0@beta",
         "drupal/metatag": "^1.22",
+        "drupal/scheduler": "^2.0@RC",
         "drupal/sitemap": "^2.0@beta",
+        "drupal/twig_tweak": "^3.2",
         "drush/drush": "^11.5"
     },
     "conflict": {
