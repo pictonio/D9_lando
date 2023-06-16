@@ -1,0 +1,16 @@
+uuid: 3471ad66-0395-4e98-b4d1-178e8d3ffc24
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.unidade_investigacao
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.unidade_investigacao
+target_entity_type_id: taxonomy_term
+target_bundle: unidade_investigacao
+default_langcode: pt-pt
+language_alterable: false

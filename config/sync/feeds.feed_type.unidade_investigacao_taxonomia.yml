@@ -1,0 +1,45 @@
+uuid: 18760764-d70b-43f3-b806-88913b7b71af
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.unidade_investigacao
+  module:
+    - feeds_ex
+    - taxonomy
+label: 'Unidade Investigação Taxonomia'
+id: unidade_investigacao_taxonomia
+description: 'Criar departamentos dentro da Taxonomia'
+help: ''
+import_period: 3600
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: jsonpath
+parser_configuration:
+  context:
+    value: ''
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: unidade_investigacao
+  langcode: pt-pt
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources: {  }
+mappings: {  }

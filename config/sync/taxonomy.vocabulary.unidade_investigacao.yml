@@ -1,0 +1,8 @@
+uuid: 45bb4308-a8fb-4d0f-b3c9-d36430dd062e
+langcode: pt-pt
+status: true
+dependencies: {  }
+name: 'Unidade Investigação'
+vid: unidade_investigacao
+description: 'UA - Unidades de Investigação'
+weight: 0
