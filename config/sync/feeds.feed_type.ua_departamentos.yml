@@ -1,0 +1,57 @@
+uuid: e11ada2c-7999-4fe7-8c71-31ac8036d6c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+  module:
+    - feeds_ex
+    - node
+label: 'UA departamentos'
+id: ua_departamentos
+description: 'Teste ao WS fornecido pela UA'
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: jsonpath
+parser_configuration:
+  context:
+    value: '$.*'
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: article
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  unidadeorganica:
+    value: unidadeOrgânica
+    label: unidadeOrgânica
+    machine_name: unidadeorganica
+    type: json
+mappings:
+  -
+    target: title
+    map:
+      value: unidadeorganica
+    settings:
+      language: null
+    unique: {  }

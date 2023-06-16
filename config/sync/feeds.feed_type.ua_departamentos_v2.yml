@@ -1,0 +1,84 @@
+uuid: 582f19cd-9fa8-4102-a9e9-3c993dabb9ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.unidade_organica.field_unidade_organica_id
+    - field.field.node.unidade_organica.field_unidade_organica_sigla
+    - node.type.unidade_organica
+  module:
+    - feeds_ex
+    - node
+label: UA_departamentos_v2
+id: ua_departamentos_v2
+description: 'Criar departamentos dentro do CType Unidade orgânica'
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: jsonpath
+parser_configuration:
+  context:
+    value: '$.*'
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: unidade_organica
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  unidadeorganica:
+    value: unidadeOrgânica
+    label: unidadeOrgânica
+    machine_name: unidadeorganica
+    type: json
+  id:
+    value: id
+    label: id
+    machine_name: id
+    type: json
+  sigla:
+    value: sigla
+    label: sigla
+    machine_name: sigla
+    type: json
+mappings:
+  -
+    target: title
+    map:
+      value: unidadeorganica
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_unidade_organica_id
+    map:
+      value: id
+    settings:
+      language: null
+    unique:
+      value: '1'
+  -
+    target: field_unidade_organica_sigla
+    map:
+      value: sigla
+    settings:
+      language: null
+    unique: {  }

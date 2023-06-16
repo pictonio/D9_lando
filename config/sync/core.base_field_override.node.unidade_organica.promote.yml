@@ -1,0 +1,22 @@
+uuid: feb6050c-71b1-46ff-8a18-e29cb24ebef8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.unidade_organica
+id: node.unidade_organica.promote
+field_name: promote
+entity_type: node
+bundle: unidade_organica
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

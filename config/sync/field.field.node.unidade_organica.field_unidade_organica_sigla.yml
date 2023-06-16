@@ -1,0 +1,19 @@
+uuid: 18619108-8333-4bd4-91b0-e9036c671132
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unidade_organica_sigla
+    - node.type.unidade_organica
+id: node.unidade_organica.field_unidade_organica_sigla
+field_name: field_unidade_organica_sigla
+entity_type: node
+bundle: unidade_organica
+label: unidade_organica_sigla
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,16 @@
+uuid: c0a1b9d9-cf60-4f65-8ed1-39fe38cf6033
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.unidade_organica
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.unidade_organica
+target_entity_type_id: node
+target_bundle: unidade_organica
+default_langcode: pt-pt
+language_alterable: false

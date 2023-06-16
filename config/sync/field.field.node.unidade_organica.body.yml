@@ -1,0 +1,23 @@
+uuid: a41a4f78-55b7-4acf-9278-a834394d2ab3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.unidade_organica
+  module:
+    - text
+id: node.unidade_organica.body
+field_name: body
+entity_type: node
+bundle: unidade_organica
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

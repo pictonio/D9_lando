@@ -1,13 +1,30 @@
 uuid: 276e6baf-f769-4ed3-a37f-bec3f225577e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - eca_user
 id: process_halfcpm
 modeller: bpmn_io
 label: 'UA Example'
 version: v1.0
 weight: null
-events: {  }
+events:
+  Event_0woecw9:
+    plugin: 'user:floodblockuser'
+    label: 'Flood User'
+    configuration: {  }
+    successors:
+      -
+        id: Activity_18a8n7k
+        condition: ''
 conditions: {  }
 gateways: {  }
-actions: {  }
+actions:
+  Activity_18a8n7k:
+    plugin: action_message_action
+    label: 'Mensagem Flood'
+    configuration:
+      replace_tokens: false
+      message: 'por favor contactar o webmaster'
+    successors: {  }

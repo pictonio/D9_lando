@@ -12,9 +12,48 @@ documentation: ''
 filename: ''
 modeldata: |
   <?xml version="1.0" encoding="UTF-8"?>
-  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
-    <bpmn2:process id="Process_haLfcPm" name="UA Example" isExecutable="true" camunda:versionTag="v1.0" />
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_haLfcPm" name="UA Example" isExecutable="true" camunda:versionTag="v1.0">
+      <bpmn2:startEvent id="Event_0woecw9" name="Flood User" camunda:modelerTemplate="org.drupal.event.user:floodblockuser">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="user:floodblockuser" />
+          </camunda:properties>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_1ih8tlz</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_18a8n7k" name="Mensagem Flood" camunda:modelerTemplate="org.drupal.action.action_message_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="action_message_action" />
+          </camunda:properties>
+          <camunda:field name="message">
+            <camunda:string>por favor contactar o webmaster</camunda:string>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_1ih8tlz</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_1ih8tlz" sourceRef="Event_0woecw9" targetRef="Activity_18a8n7k" />
+    </bpmn2:process>
     <bpmndi:BPMNDiagram id="sid-9d0ae117-2f5f-4629-8b73-5da979f0a5b1">
-      <bpmndi:BPMNPlane id="sid-2c991d03-25ac-4786-ae2d-3e03c1470102" bpmnElement="Process_haLfcPm" />
+      <bpmndi:BPMNPlane id="sid-2c991d03-25ac-4786-ae2d-3e03c1470102" bpmnElement="Process_haLfcPm">
+        <bpmndi:BPMNShape id="Event_0woecw9_di" bpmnElement="Event_0woecw9">
+          <dc:Bounds x="242" y="122" width="36" height="36" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="233" y="165" width="54" height="14" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_18a8n7k_di" bpmnElement="Activity_18a8n7k">
+          <dc:Bounds x="350" y="100" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_1ih8tlz_di" bpmnElement="Flow_1ih8tlz">
+          <di:waypoint x="278" y="140" />
+          <di:waypoint x="350" y="140" />
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
   </bpmn2:definitions>

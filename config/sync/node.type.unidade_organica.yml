@@ -1,0 +1,18 @@
+uuid: 63af959f-25e2-42a7-a0d4-59aabb8371db
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Unidade Orgânica'
+type: unidade_organica
+description: 'Unidade Orgânica - Testar o WS fornecido pela equipa da UA'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

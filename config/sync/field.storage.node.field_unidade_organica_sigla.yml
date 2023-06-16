@@ -1,0 +1,21 @@
+uuid: 36ae6460-918f-48e7-a54f-742d3b1335a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_unidade_organica_sigla
+field_name: field_unidade_organica_sigla
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 5ad663cd-8c94-4837-b965-0fad280a2c3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unidade_organica_id
+    - node.type.unidade_organica
+id: node.unidade_organica.field_unidade_organica_id
+field_name: field_unidade_organica_id
+entity_type: node
+bundle: unidade_organica
+label: unidade_organica_id
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
