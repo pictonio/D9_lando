@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e384550010e5eb51e885009d3192aa6f",
+    "content-hash": "f752ef8bcfa59614741218e03d7e49e1",
     "packages": [
         {
             "name": "arthurkirkosa/guzzle-description-loader",
@@ -2552,17 +2552,11 @@
         },
         {
             "name": "drupal/http_client_manager",
-            "version": "9.3.6",
+            "version": "dev-9.3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/http_client_manager.git",
-                "reference": "9.3.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/http_client_manager-9.3.6.zip",
-                "reference": "9.3.6",
-                "shasum": "6ff3cf452ad5145e43b15b4b479901b3770df7b0"
+                "reference": "51295f5af74f5db45247f5662a24a0d2b0932294"
             },
             "require": {
                 "arthurkirkosa/guzzle-description-loader": "^0.0.7",
@@ -2571,12 +2565,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-9.3.x": "9.3.x-dev"
+                },
                 "drupal": {
-                    "version": "9.3.6",
-                    "datestamp": "1676563522",
+                    "version": "9.3.5+1-dev",
+                    "datestamp": "1676563412",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -9119,6 +9116,7 @@
         "drupal/feeds": 10,
         "drupal/feeds_ex": 10,
         "drupal/feeds_tamper": 10,
+        "drupal/http_client_manager": 20,
         "drupal/openid_connect": 20,
         "drupal/simple_oauth": 10,
         "drupal/sitemap": 10,
