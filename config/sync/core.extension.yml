@@ -24,7 +24,9 @@ module:
   dynamic_page_cache: 0
   eca: 0
   eca_base: 0
+  eca_content: 0
   eca_form: 0
+  eca_migrate: 0
   eca_modeller_bpmn: 0
   eca_ui: 0
   eca_user: 0
@@ -42,6 +44,8 @@ module:
   form_api_example: 0
   help: 0
   history: 0
+  http_client_manager: 0
+  http_client_manager_example: 0
   image: 0
   jsonapi: 0
   language: 0
@@ -50,6 +54,7 @@ module:
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
+  migrate: 0
   mysql: 0
   node: 0
   openid_connect: 0

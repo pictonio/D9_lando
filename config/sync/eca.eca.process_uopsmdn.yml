@@ -1,0 +1,34 @@
+uuid: e93abcc6-a798-470e-bf5e-8bff16f5fd5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - eca_form
+id: process_uopsmdn
+modeller: bpmn_io
+label: 'Contact Form'
+version: ''
+weight: null
+events:
+  Event_1lkpsa4:
+    plugin: 'form:form_submit'
+    label: 'Contact form submission'
+    configuration:
+      form_id: contact-message-feedback-form
+      entity_type_id: ''
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_02dyvc4
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_02dyvc4:
+    plugin: action_message_action
+    label: 'Mensagem Custom'
+    configuration:
+      replace_tokens: false
+      message: 'Custom message - via contact form'
+    successors: {  }

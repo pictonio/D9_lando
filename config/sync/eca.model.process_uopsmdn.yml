@@ -1,0 +1,73 @@
+uuid: fa66a5d0-68f7-40f8-9b1c-3e19b4bbb515
+langcode: en
+status: true
+dependencies:
+  config:
+    - eca.eca.process_uopsmdn
+id: process_uopsmdn
+label: 'Contact Form'
+tags:
+  - untagged
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_uOPSMdn" name="Contact Form" isExecutable="true">
+      <bpmn2:startEvent id="Event_1lkpsa4" name="Contact form submission" camunda:modelerTemplate="org.drupal.event.form:form_submit">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="form:form_submit" />
+          </camunda:properties>
+          <camunda:field name="form_id">
+            <camunda:string>contact-message-feedback-form</camunda:string>
+          </camunda:field>
+          <camunda:field name="entity_type_id">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="bundle">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="operation">
+            <camunda:string></camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_1jmuk2y</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_02dyvc4" name="Mensagem Custom" camunda:modelerTemplate="org.drupal.action.action_message_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="action_message_action" />
+          </camunda:properties>
+          <camunda:field name="message">
+            <camunda:string>Custom message - via contact form</camunda:string>
+          </camunda:field>
+          <camunda:field name="replace_tokens">
+            <camunda:string>no</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_1jmuk2y</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_1jmuk2y" sourceRef="Event_1lkpsa4" targetRef="Activity_02dyvc4" />
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-bceb82af-eed4-4dbd-9ea3-6e53f49f9033">
+      <bpmndi:BPMNPlane id="sid-a89f281c-eae3-4c29-a188-54a2e4f331b1" bpmnElement="Process_uOPSMdn">
+        <bpmndi:BPMNShape id="Event_1lkpsa4_di" bpmnElement="Event_1lkpsa4">
+          <dc:Bounds x="352" y="132" width="36" height="36" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="340" y="175" width="63" height="27" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_02dyvc4_di" bpmnElement="Activity_02dyvc4">
+          <dc:Bounds x="520" y="100" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_1jmuk2y_di" bpmnElement="Flow_1jmuk2y">
+          <di:waypoint x="388" y="150" />
+          <di:waypoint x="454" y="150" />
+          <di:waypoint x="454" y="140" />
+          <di:waypoint x="520" y="140" />
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>
