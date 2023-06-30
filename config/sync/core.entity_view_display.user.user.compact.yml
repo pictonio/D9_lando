@@ -28,5 +28,7 @@ content:
     weight: 0
     region: content
 hidden:
+  director_profiles: true
+  gestor_profiles: true
   langcode: true
   member_for: true

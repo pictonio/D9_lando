@@ -36,4 +36,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
 hidden:
+  director_profiles: true
+  gestor_profiles: true
   langcode: true

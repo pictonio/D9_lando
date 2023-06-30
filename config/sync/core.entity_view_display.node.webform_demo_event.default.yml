@@ -21,37 +21,37 @@ bundle: webform_demo_event
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_webform_demo_event_date:
-    weight: 0
+    type: datetime_default
     label: above
     settings:
       timezone_override: ''
       format_type: long
     third_party_settings: {  }
-    type: datetime_default
+    weight: 0
     region: content
   field_webform_entity_limit_total:
     type: number_integer
-    weight: 2
-    region: content
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-  links:
-    weight: 4
+    weight: 2
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 4
+    region: content
   webform:
-    weight: 3
+    type: webform_entity_reference_link
     label: hidden
     settings:
       label: Register
@@ -61,7 +61,7 @@ content:
           - button
         style: 'margin: 1em 0'
     third_party_settings: {  }
-    type: webform_entity_reference_link
+    weight: 3
     region: content
 hidden:
   langcode: true
