@@ -1,0 +1,25 @@
+uuid: 69cb8634-b9e3-48be-855f-f1f62c6c6b85
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.mandatory-links
+  module:
+    - system
+  theme:
+    - semanticua
+id: mandatorylinks
+theme: semanticua
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'system_menu_block:mandatory-links'
+settings:
+  id: 'system_menu_block:mandatory-links'
+  label: 'Mandatory links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

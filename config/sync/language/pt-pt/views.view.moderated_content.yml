@@ -8,19 +8,14 @@ display:
       fields:
         title:
           label: Título
-          separator: ', '
         type:
           label: 'Tipo de conteúdo'
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
         moderation_state:
           label: 'Estado de moderação'
-          separator: ', '
         changed:
           label: Atualizado
-          separator: ', '
         operations:
           label: Operações
       pager:
@@ -39,8 +34,6 @@ display:
           submit_button: Filtro
           reset_button_label: Reiniciar
           exposed_sorts_label: 'Ordenar por'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       empty:
         area_text_custom:
           content: 'Nenhum conteúdo moderado disponível. Apenas versões pendentes de conteúdo, como rascunhos, são listadas aqui.'

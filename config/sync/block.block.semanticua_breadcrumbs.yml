@@ -1,0 +1,22 @@
+uuid: e95d51fb-e690-4896-a83b-44becc03ea0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - semanticua
+_core:
+  default_config_hash: rdnRBSx6g-Lho3tNAGttd2cnBJ9aO8X86GoG2XmODD8
+id: semanticua_breadcrumbs
+theme: semanticua
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 33ea375e-4c51-4e30-9f0d-692f5c056911
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.webform_demo_region
+id: node.webform_demo_region.promote
+field_name: promote
+entity_type: node
+bundle: webform_demo_region
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

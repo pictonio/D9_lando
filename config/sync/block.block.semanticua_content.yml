@@ -1,0 +1,22 @@
+uuid: 2140c73b-1b72-4f30-97ea-7d29bad30490
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - semanticua
+_core:
+  default_config_hash: dL5X6fluUUwoNq3qK9AgTZMw4yRz8fWyPu2nbvZD-lE
+id: semanticua_content
+theme: semanticua
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

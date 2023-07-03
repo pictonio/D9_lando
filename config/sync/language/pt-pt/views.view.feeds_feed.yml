@@ -1,4 +1,3 @@
-label: Feeds
 display:
   default:
     display_title: Principal
@@ -8,8 +7,6 @@ display:
           submit_button: Aplicar
           reset_button_label: Reiniciar
           exposed_sorts_label: 'Ordenar por'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           tags:
@@ -24,22 +21,16 @@ display:
       fields:
         feeds_feed_bulk_form:
           label: 'Atualização em massa'
-          action_title: 'With selection'
         title:
           label: Título
-          separator: ', '
         type:
           label: Tipo
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
         changed:
           label: Atualizado
-          separator: ', '
         imported:
           label: Importado
-          separator: ', '
         operations:
           label: Operações
       filters:
@@ -49,9 +40,5 @@ display:
         type:
           expose:
             label: Tipo
-      title: Feeds
   page_1:
     display_title: Página
-    display_options:
-      menu:
-        title: Feeds

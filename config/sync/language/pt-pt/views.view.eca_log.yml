@@ -6,18 +6,13 @@ display:
       fields:
         name:
           label: Utilizador
-          separator: ', '
         timestamp:
           label: Hora
         message:
           label: Mensagem
-        variables:
-          label: Tokens
       pager:
         options:
           tags:
-            next: ››
-            previous: ‹‹
             first: '« Primeira'
             last: 'Última »'
           expose:
@@ -29,8 +24,6 @@ display:
           submit_button: Aplicar
           reset_button_label: Reiniciar
           exposed_sorts_label: 'Ordenar por'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       filters:
         timestamp:
           expose:

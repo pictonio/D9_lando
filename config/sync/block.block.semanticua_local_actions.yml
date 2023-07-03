@@ -1,0 +1,20 @@
+uuid: 49f68b1e-d207-4d42-b0b1-489d3ddf2811
+langcode: en
+status: true
+dependencies:
+  theme:
+    - semanticua
+_core:
+  default_config_hash: Y3uoZrFcctzerpRYEn8SVF-HOR1jVZ89tqhm3XMxZ2M
+id: semanticua_local_actions
+theme: semanticua
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

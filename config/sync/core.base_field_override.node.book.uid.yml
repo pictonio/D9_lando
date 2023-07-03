@@ -1,0 +1,20 @@
+uuid: b5b437a5-606e-489c-b4eb-3f674108fbe0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.book
+id: node.book.uid
+field_name: uid
+entity_type: node
+bundle: book
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

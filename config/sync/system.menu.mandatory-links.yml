@@ -1,0 +1,8 @@
+uuid: b1658784-078a-4d91-b990-9c245ded7464
+langcode: en
+status: true
+dependencies: {  }
+id: mandatory-links
+label: 'Mandatory links'
+description: ''
+locked: false

@@ -1,0 +1,22 @@
+uuid: 1fa38579-d2a4-4a0f-afc0-dcfa78bac0a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - semanticua
+_core:
+  default_config_hash: _Zl2VEQG53D8VtlUNi_IPGlJl1znhuib1IlmHCUZlHQ
+id: semanticua_help
+theme: semanticua
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

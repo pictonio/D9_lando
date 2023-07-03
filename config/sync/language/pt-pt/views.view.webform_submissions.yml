@@ -8,13 +8,9 @@ display:
           submit_button: Aplicar
           reset_button_label: Reiniciar
           exposed_sorts_label: 'Ordenar por'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           tags:
-            previous: ‹‹
-            next: ››
             first: '« Primeira'
             last: 'Última »'
           expose:
@@ -22,18 +18,12 @@ display:
             items_per_page_options_all_label: '- Todos -'
             offset_label: Deslocamento
       fields:
-        sid:
-          label: '#'
-          separator: ', '
         in_draft:
           label: Rascunho
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
         remote_addr:
           label: 'Endereço de IP'
-          separator: ', '
         view_webform_submission:
           label: Operações
           text: ver
@@ -50,27 +40,18 @@ display:
       fields:
         webform_submission_bulk_form:
           action_title: Ação
-        sid:
-          label: '#'
-          separator: ', '
         in_draft:
           label: Rascunho
-          separator: ', '
         sticky:
           label: 'Em destaque'
-          separator: ', '
         locked:
           label: Bloqueado
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
         completed:
           label: Concluído
-          separator: ', '
         remote_addr:
           label: 'Endereço de IP'
-          separator: ', '
         operations:
           label: Operações
       filters:
@@ -88,27 +69,18 @@ display:
       fields:
         webform_submission_bulk_form:
           action_title: Ação
-        sid:
-          label: '#'
-          separator: ', '
         in_draft:
           label: Rascunho
-          separator: ', '
         sticky:
           label: 'Em destaque'
-          separator: ', '
         locked:
           label: Bloqueado
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
         completed:
           label: Concluído
-          separator: ', '
         remote_addr:
           label: 'Endereço de IP'
-          separator: ', '
         view_webform_submission:
           label: Operações
           text: ver
@@ -128,27 +100,18 @@ display:
   embed_review:
     display_options:
       fields:
-        sid:
-          label: '#'
-          separator: ', '
         in_draft:
           label: Rascunho
-          separator: ', '
         sticky:
           label: 'Em destaque'
-          separator: ', '
         locked:
           label: Bloqueado
-          separator: ', '
         created:
           label: Criado
-          separator: ', '
         completed:
           label: Concluído
-          separator: ', '
         remote_addr:
           label: 'Endereço de IP'
-          separator: ', '
         view_webform_submission:
           label: Operações
           text: ver
