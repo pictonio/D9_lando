@@ -14083,4 +14083,10 @@ footer .menu--social-network > ul .menu li.sn-youtube a,
   padding: 20px 0;
 }
 
+.navbar {
+  background-color: #95ca3d;
+  transition: top 1s linear;
+  transition: all 2s linear;
+}
+
 /*# sourceMappingURL=style.css.map */

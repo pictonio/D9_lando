@@ -1,4 +1,4 @@
-uuid: 48b8c2b2-9fa1-46d3-958a-7160896eae78
+uuid: 6cf67076-54b6-42be-a0a2-4d95519066ad
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - semanticua
-_core:
-  default_config_hash: yO2BFgeVCwC_Q7KqceUQSEWvKH7nc25Zgn0lfVq-YH8
-id: semanticua_account_menu
+id: useraccountmenu
 theme: semanticua
-region: nav_additional
-weight: -7
+region: service
+weight: 0
 provider: null
 plugin: 'system_menu_block:account'
 settings:
