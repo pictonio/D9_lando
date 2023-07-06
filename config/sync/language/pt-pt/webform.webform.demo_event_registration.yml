@@ -1,4 +1,3 @@
-category: Demo
 handlers:
   submission_limit:
     label: 'Limite de envio'

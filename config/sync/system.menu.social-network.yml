@@ -1,0 +1,8 @@
+uuid: bfe6e8fe-bbac-4575-b2e0-27b7f1ac6e78
+langcode: en
+status: true
+dependencies: {  }
+id: social-network
+label: 'Social Network'
+description: ''
+locked: false

@@ -1,0 +1,8 @@
+uuid: d771ec3a-7c94-4d9d-ab1c-84e87a7eb79f
+langcode: en
+status: true
+dependencies: {  }
+id: short-menu
+label: 'Short menu'
+description: ''
+locked: false

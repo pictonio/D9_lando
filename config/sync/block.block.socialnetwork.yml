@@ -1,0 +1,25 @@
+uuid: a1b9b19c-e0af-4e2d-bc5b-e5484a8c2615
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-network
+  module:
+    - system
+  theme:
+    - semanticua
+id: socialnetwork
+theme: semanticua
+region: socialnetwok
+weight: 0
+provider: null
+plugin: 'system_menu_block:social-network'
+settings:
+  id: 'system_menu_block:social-network'
+  label: 'Social Network'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

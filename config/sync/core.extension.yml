@@ -53,6 +53,7 @@ module:
   locale: 0
   menu_link_content: 0
   menu_ui: 0
+  menus_attribute: 0
   metatag: 0
   migrate: 0
   mysql: 0
@@ -99,4 +100,7 @@ module:
 theme:
   olivero: 0
   claro: 0
+  stable9: 0
+  bootstrap5: 0
+  semanticua: 0
 profile: standard

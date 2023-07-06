@@ -19,17 +19,12 @@ display:
           label: 'Grupos de utilizador'
         created:
           label: 'Membro desde'
-          settings:
-            future_format: '@interval'
-            past_format: '@interval'
         access:
           label: 'Último acesso'
           settings:
             past_format: '@interval atrás'
         operations:
           label: Operações
-        mail:
-          separator: ', '
       pager:
         options:
           tags:
@@ -46,8 +41,6 @@ display:
           submit_button: Filtro
           reset_button_label: Reiniciar
           exposed_sorts_label: 'Ordenar por'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       empty:
         area_text_custom:
           content: 'Nenhuma pessoa disponível.'

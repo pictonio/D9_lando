@@ -1,0 +1,22 @@
+uuid: 56cf8c36-e693-48f8-9537-a261b6b82f3b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - semanticua
+_core:
+  default_config_hash: l-MjpxEgFuJH-jZXcTw_4f0GgvIakJ-5Vl5lGzr1mbU
+id: semanticua_local_tasks
+theme: semanticua
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }
