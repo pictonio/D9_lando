@@ -1,0 +1,25 @@
+uuid: 99ab2752-2ae9-449f-8fed-a7a9f808b924
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.short-menu
+  module:
+    - system
+  theme:
+    - semanticua
+id: shortmenu
+theme: semanticua
+region: service
+weight: 0
+provider: null
+plugin: 'system_menu_block:short-menu'
+settings:
+  id: 'system_menu_block:short-menu'
+  label: 'Short menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
